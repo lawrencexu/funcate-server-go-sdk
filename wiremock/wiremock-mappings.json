@@ -1,0 +1,910 @@
+{
+  "mappings": [
+    {
+      "id": "e7887ec7-9483-4f8e-adcf-55beda876aad",
+      "name": "List sessions - list_sessions_response",
+      "request": {
+        "urlPathTemplate": "/agents/{agentSlug}/owners/{ownerId}/sessions",
+        "method": "GET",
+        "pathParameters": {
+          "agentSlug": {
+            "equalTo": "<AGENT_SLUG>"
+          },
+          "ownerId": {
+            "equalTo": "<OWNER_ID>"
+          }
+        },
+        "queryParameters": {
+          "sort": {
+            "equalTo": "-created_at"
+          },
+          "filter": {
+            "equalTo": "(created_at>1732924800000)"
+          },
+          "fields": {
+            "equalTo": "id,agent_slug,owner_id,created_at"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"items\": [\n      {\n        \"id\": \"ses_abc123\",\n        \"agent_slug\": \"agtxyz789\",\n        \"owner_id\": \"usr_def456\",\n        \"created_at\": 1732924800000,\n        \"updated_at\": 1732924800000\n      },\n      {\n        \"id\": \"ses_abc124\",\n        \"agent_slug\": \"agtxyz789\",\n        \"owner_id\": \"usr_def456\",\n        \"created_at\": 1732924801000,\n        \"updated_at\": 1732924801000\n      }\n    ],\n    \"page\": 1,\n    \"perPage\": 30,\n    \"totalItems\": 2,\n    \"totalPages\": 1\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e7887ec7-9483-4f8e-adcf-55beda876aad",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "17f0bcc5-5eed-4f95-97fa-33b1588d6d03",
+      "name": "Create a new session - create_session_response",
+      "request": {
+        "urlPathTemplate": "/agents/{agentSlug}/owners/{ownerId}/sessions",
+        "method": "POST",
+        "pathParameters": {
+          "agentSlug": {
+            "equalTo": "<AGENT_SLUG>"
+          },
+          "ownerId": {
+            "equalTo": "<OWNER_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"status\": 201,\n  \"code\": \"created\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"session\": {\n      \"id\": \"ses_abc123\",\n      \"agent_slug\": \"agtxyz789\",\n      \"owner_id\": \"usr_def456\",\n      \"created_at\": 1732924800000,\n      \"updated_at\": 1732924800000\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "17f0bcc5-5eed-4f95-97fa-33b1588d6d03",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c4010cb8-75d6-468e-a533-0b40f3c2164e",
+      "name": "Get session details - get_session_response",
+      "request": {
+        "urlPathTemplate": "/agents/{agentSlug}/owners/{ownerId}/sessions/{sessionId}",
+        "method": "GET",
+        "pathParameters": {
+          "agentSlug": {
+            "equalTo": "<AGENT_SLUG>"
+          },
+          "ownerId": {
+            "equalTo": "<OWNER_ID>"
+          },
+          "sessionId": {
+            "equalTo": "<SESSION_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"session\": {\n      \"id\": \"ses_abc123\",\n      \"agent_slug\": \"agtxyz789\",\n      \"owner_id\": \"usr_def456\",\n      \"created_at\": 1732924800000,\n      \"updated_at\": 1732924800000\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c4010cb8-75d6-468e-a533-0b40f3c2164e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "95f7f022-9517-4ed4-b87d-920883cca3dc",
+      "name": "Delete session - delete_session_response",
+      "request": {
+        "urlPathTemplate": "/agents/{agentSlug}/owners/{ownerId}/sessions/{sessionId}",
+        "method": "DELETE",
+        "pathParameters": {
+          "agentSlug": {
+            "equalTo": "<AGENT_SLUG>"
+          },
+          "ownerId": {
+            "equalTo": "<OWNER_ID>"
+          },
+          "sessionId": {
+            "equalTo": "<SESSION_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "95f7f022-9517-4ed4-b87d-920883cca3dc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "15ecd6f6-0f98-4993-85b2-9d1411fcebd0",
+      "name": "List messages - list_messages_response",
+      "request": {
+        "urlPathTemplate": "/agents/{agentSlug}/owners/{ownerId}/sessions/{sessionId}/messages",
+        "method": "GET",
+        "pathParameters": {
+          "agentSlug": {
+            "equalTo": "<AGENT_SLUG>"
+          },
+          "ownerId": {
+            "equalTo": "<OWNER_ID>"
+          },
+          "sessionId": {
+            "equalTo": "<SESSION_ID>"
+          }
+        },
+        "queryParameters": {
+          "sort": {
+            "equalTo": "-created_at"
+          },
+          "filter": {
+            "equalTo": "(author='user' && created_at>1732924800000)"
+          },
+          "fields": {
+            "equalTo": "id,author,created_at"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"items\": [\n      {\n        \"author\": \"user\",\n        \"id\": \"msg_123456\",\n        \"invocation_id\": \"inv_789012\",\n        \"created_at\": 1732924800000,\n        \"partial\": false,\n        \"turn_complete\": true,\n        \"interrupted\": false,\n        \"error_code\": \"\",\n        \"error_message\": \"\",\n        \"is_final_response\": true,\n        \"parts\": [\n          {\n            \"type\": \"text\",\n            \"text\": \"Hello, how can I help you?\",\n            \"tool_call\": {\n              \"id\": \"tc_123\",\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Beijing\"\n              }\n            },\n            \"tool_response\": {\n              \"id\": \"tr_123\",\n              \"name\": \"get_weather\",\n              \"response\": \"Tool execution result\",\n              \"metadata\": {\n                \"is_hidden\": false,\n                \"message\": \"Hidden from user\"\n              }\n            }\n          }\n        ]\n      },\n      {\n        \"author\": \"assistant\",\n        \"id\": \"msg_123457\",\n        \"invocation_id\": \"inv_789013\",\n        \"created_at\": 1732924801000,\n        \"partial\": false,\n        \"turn_complete\": true,\n        \"interrupted\": false,\n        \"error_code\": \"\",\n        \"error_message\": \"\",\n        \"is_final_response\": true,\n        \"parts\": [\n          {\n            \"type\": \"text\",\n            \"text\": \"I can help you with that!\",\n            \"tool_call\": {\n              \"id\": \"tc_123\",\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Beijing\"\n              }\n            },\n            \"tool_response\": {\n              \"id\": \"tr_123\",\n              \"name\": \"get_weather\",\n              \"response\": \"Tool execution result\",\n              \"metadata\": {\n                \"is_hidden\": false,\n                \"message\": \"Hidden from user\"\n              }\n            }\n          }\n        ]\n      }\n    ],\n    \"page\": 1,\n    \"perPage\": 30,\n    \"totalItems\": 2,\n    \"totalPages\": 1\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "15ecd6f6-0f98-4993-85b2-9d1411fcebd0",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "10cf7b1f-c741-41ff-a1c6-d39558d4e485",
+      "name": "Create a new message - create_message_response",
+      "request": {
+        "urlPathTemplate": "/agents/{agentSlug}/owners/{ownerId}/sessions/{sessionId}/messages",
+        "method": "POST",
+        "pathParameters": {
+          "agentSlug": {
+            "equalTo": "<AGENT_SLUG>"
+          },
+          "ownerId": {
+            "equalTo": "<OWNER_ID>"
+          },
+          "sessionId": {
+            "equalTo": "<SESSION_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"status\": 201,\n  \"code\": \"created\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"message\": {\n      \"author\": \"user\",\n      \"id\": \"msg_123456\",\n      \"invocation_id\": \"inv_789012\",\n      \"created_at\": 1732924800000,\n      \"partial\": false,\n      \"turn_complete\": true,\n      \"interrupted\": false,\n      \"error_code\": \"\",\n      \"error_message\": \"\",\n      \"is_final_response\": true,\n      \"parts\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"Hello, how can I help you?\",\n          \"tool_call\": {\n            \"id\": \"tc_123\",\n            \"name\": \"get_weather\",\n            \"args\": {\n              \"city\": \"Beijing\"\n            }\n          },\n          \"tool_response\": {\n            \"id\": \"tr_123\",\n            \"name\": \"get_weather\",\n            \"response\": \"Tool execution result\",\n            \"metadata\": {\n              \"is_hidden\": false,\n              \"message\": \"Hidden from user\"\n            }\n          }\n        }\n      ]\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "10cf7b1f-c741-41ff-a1c6-d39558d4e485",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "06170c79-7501-424f-9ac9-7f889806c5b5",
+      "name": "Get available authentication methods - auth_methods_response",
+      "request": {
+        "urlPathTemplate": "/auths/{authSlug}/methods",
+        "method": "GET",
+        "pathParameters": {
+          "authSlug": {
+            "equalTo": "<AUTH_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"password\": {\n      \"enabled\": true,\n      \"withUsername\": true\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "06170c79-7501-424f-9ac9-7f889806c5b5",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "10ecb44a-f3d7-4119-b54e-f46c03f460aa",
+      "name": "Authenticate with username and password - auth_with_password_response",
+      "request": {
+        "urlPathTemplate": "/auths/{authSlug}/withPassword",
+        "method": "POST",
+        "pathParameters": {
+          "authSlug": {
+            "equalTo": "<AUTH_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"token\": \"jwt_token_here\",\n    \"tokenExpiresIn\": 3600,\n    \"user\": {\n      \"id\": \"usr_abc123\",\n      \"username\": \"johndoe\",\n      \"createdAt\": \"2025-12-25T08:00:00Z\",\n      \"updatedAt\": \"2025-12-25T08:00:00Z\"\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "10ecb44a-f3d7-4119-b54e-f46c03f460aa",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "31ab0a35-4c98-480c-9b35-bf73f716cfdd",
+      "name": "Refresh JWT token - auth_refresh_response",
+      "request": {
+        "urlPathTemplate": "/auths/{authSlug}/refresh",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "authSlug": {
+            "equalTo": "<AUTH_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"token\": \"new_jwt_token_here\",\n    \"tokenExpiresIn\": 3600\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "31ab0a35-4c98-480c-9b35-bf73f716cfdd",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "35e95260-c22d-4480-912d-18ca5232028c",
+      "name": "Get public token - auth_public_response",
+      "request": {
+        "urlPathTemplate": "/auths/{authSlug}/public",
+        "method": "GET",
+        "pathParameters": {
+          "authSlug": {
+            "equalTo": "<AUTH_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"token\": \"public_jwt_here\",\n    \"tokenExpiresIn\": 2592000\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "35e95260-c22d-4480-912d-18ca5232028c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "2bad8665-cc19-41ec-8827-094bec2376b8",
+      "name": "Register new user - create_user_response",
+      "request": {
+        "urlPathTemplate": "/auths/{authSlug}/users",
+        "method": "POST",
+        "pathParameters": {
+          "authSlug": {
+            "equalTo": "<AUTH_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"status\": 201,\n  \"code\": \"created\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"token\": \"jwt_token_here\",\n    \"tokenExpiresIn\": 3600,\n    \"user\": {\n      \"id\": \"usr_abc123\",\n      \"username\": \"johndoe\",\n      \"createdAt\": \"2025-12-25T08:00:00Z\",\n      \"updatedAt\": \"2025-12-25T08:00:00Z\"\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "2bad8665-cc19-41ec-8827-094bec2376b8",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "758a87fb-fad7-4449-8b3f-e30289f23bca",
+      "name": "Get current user - get_current_user_response",
+      "request": {
+        "urlPathTemplate": "/auths/{authSlug}/users/current",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "authSlug": {
+            "equalTo": "<AUTH_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"user\": {\n      \"id\": \"usr_abc123\",\n      \"username\": \"johndoe\",\n      \"createdAt\": \"2025-12-25T08:00:00Z\",\n      \"updatedAt\": \"2025-12-25T08:00:00Z\"\n    }\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "758a87fb-fad7-4449-8b3f-e30289f23bca",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0acdf17e-a325-452b-93bb-763befefeb70",
+      "name": "List files in a bucket - list_files_response",
+      "request": {
+        "urlPathTemplate": "/buckets/{bucketSlug}/files",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "bucketSlug": {
+            "equalTo": "<BUCKET_SLUG>"
+          }
+        },
+        "queryParameters": {
+          "sort": {
+            "equalTo": "-created,name"
+          },
+          "filter": {
+            "equalTo": "(name~'report' && size>1024)"
+          },
+          "fields": {
+            "equalTo": "id,name,size_bytes"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"items\": [\n      {\n        \"id\": \"report.pdf\",\n        \"bucketSlug\": \"mybucket\",\n        \"contentType\": \"application/pdf\",\n        \"sizeBytes\": 1048576,\n        \"createdAt\": 1735142400000,\n        \"updatedAt\": 1735142400000\n      }\n    ],\n    \"page\": 1,\n    \"perPage\": 30,\n    \"totalItems\": 1,\n    \"totalPages\": 1\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0acdf17e-a325-452b-93bb-763befefeb70",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2179cb4-8e28-42fb-959f-5b37a3688f3f",
+      "name": "Upload a file to a bucket - upload_file_response",
+      "request": {
+        "urlPathTemplate": "/buckets/{bucketSlug}/files",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "bucketSlug": {
+            "equalTo": "<BUCKET_SLUG>"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"status\": 201,\n  \"code\": \"created\",\n  \"message\": \"Created\",\n  \"data\": {\n    \"id\": \"report.pdf\",\n    \"bucketSlug\": \"mybucket\",\n    \"contentType\": \"application/pdf\",\n    \"sizeBytes\": 1048576,\n    \"createdAt\": 1735142400000,\n    \"updatedAt\": 1735142400000\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a2179cb4-8e28-42fb-959f-5b37a3688f3f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0f7a9afc-4de3-46e2-bac7-8dddc35169ac",
+      "name": "Get file metadata - get_file_response",
+      "request": {
+        "urlPathTemplate": "/buckets/{bucketSlug}/files/{fileId}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "bucketSlug": {
+            "equalTo": "<BUCKET_SLUG>"
+          },
+          "fileId": {
+            "equalTo": "<FILE_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"id\": \"report.pdf\",\n    \"bucketSlug\": \"mybucket\",\n    \"contentType\": \"application/pdf\",\n    \"sizeBytes\": 1048576,\n    \"createdAt\": 1735142400000,\n    \"updatedAt\": 1735142400000\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0f7a9afc-4de3-46e2-bac7-8dddc35169ac",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "5c910fd4-3308-4048-b6a4-99a6afa84384",
+      "name": "Delete a file - delete_file_response",
+      "request": {
+        "urlPathTemplate": "/buckets/{bucketSlug}/files/{fileId}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "bucketSlug": {
+            "equalTo": "<BUCKET_SLUG>"
+          },
+          "fileId": {
+            "equalTo": "<FILE_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "body": "{\n  \"status\": 204,\n  \"code\": \"no_content\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"id\": \"file_abc123\",\n    \"bucketSlug\": \"mybucket\",\n    \"contentType\": \"application/pdf\",\n    \"sizeBytes\": 1048576,\n    \"createdAt\": 1735142400000,\n    \"updatedAt\": 1735142400000\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5c910fd4-3308-4048-b6a4-99a6afa84384",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "07351345-83c6-4394-af93-5b8eb889c5ff",
+      "name": "View file content - default",
+      "request": {
+        "urlPathTemplate": "/buckets/{bucketSlug}/view/files/{fileId}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "bucketSlug": {
+            "equalTo": "bucketSlug"
+          },
+          "fileId": {
+            "equalTo": "fileId"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 1,\n  \"code\": \"code\",\n  \"message\": \"message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "07351345-83c6-4394-af93-5b8eb889c5ff",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e633c9c2-9d82-498b-bbaa-41a459049d87",
+      "name": "Download file content - default",
+      "request": {
+        "urlPathTemplate": "/buckets/{bucketSlug}/download/files/{fileId}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "bucketSlug": {
+            "equalTo": "bucketSlug"
+          },
+          "fileId": {
+            "equalTo": "fileId"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 1,\n  \"code\": \"code\",\n  \"message\": \"message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e633c9c2-9d82-498b-bbaa-41a459049d87",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d42d0766-ea67-49af-95a7-2529100d6ebc",
+      "name": "List records in a table or view - list_records_response",
+      "request": {
+        "urlPathTemplate": "/litedbs/{litedbSlug}/tables/{tableId}/records",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "litedbSlug": {
+            "equalTo": "<LITEDB_SLUG>"
+          },
+          "tableId": {
+            "equalTo": "<TABLE_ID>"
+          }
+        },
+        "queryParameters": {
+          "sort": {
+            "equalTo": "-created,id"
+          },
+          "filter": {
+            "equalTo": "(title~'abc' && created>'2022-01-01')"
+          },
+          "fields": {
+            "equalTo": "*"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"page\": 1,\n    \"perPage\": 30,\n    \"totalItems\": 1,\n    \"totalPages\": 1,\n    \"items\": [\n      {\n        \"id\": \"97cc3d3d-3804-4669-97b9-567572fb6653\",\n        \"created\": \"2022-01-01 10:00:00.123Z\",\n        \"updated\": \"2022-01-01 10:00:00.123Z\",\n        \"title\": \"Example record\",\n        \"active\": true\n      }\n    ]\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d42d0766-ea67-49af-95a7-2529100d6ebc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "f18afc68-8c82-43bd-bbe1-7dca2c43f984",
+      "name": "Create a record in a table - create_record_response",
+      "request": {
+        "urlPathTemplate": "/litedbs/{litedbSlug}/tables/{tableId}/records",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "litedbSlug": {
+            "equalTo": "<LITEDB_SLUG>"
+          },
+          "tableId": {
+            "equalTo": "<TABLE_ID>"
+          }
+        },
+        "queryParameters": {
+          "fields": {
+            "equalTo": "*"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"id\": \"97cc3d3d-3804-4669-97b9-567572fb6653\",\n    \"created\": \"2022-01-01 10:00:00.123Z\",\n    \"updated\": \"2022-01-01 10:00:00.123Z\",\n    \"title\": \"Example record\",\n    \"active\": true\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "f18afc68-8c82-43bd-bbe1-7dca2c43f984",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "48739cca-6574-427c-80df-86b845af2d9b",
+      "name": "Get a specific record - get_record_response",
+      "request": {
+        "urlPathTemplate": "/litedbs/{litedbSlug}/tables/{tableId}/records/{recordId}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "litedbSlug": {
+            "equalTo": "<LITEDB_SLUG>"
+          },
+          "tableId": {
+            "equalTo": "<TABLE_ID>"
+          },
+          "recordId": {
+            "equalTo": "<RECORD_ID>"
+          }
+        },
+        "queryParameters": {
+          "fields": {
+            "equalTo": "*"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"id\": \"97cc3d3d-3804-4669-97b9-567572fb6653\",\n    \"created\": \"2022-01-01 10:00:00.123Z\",\n    \"updated\": \"2022-01-01 10:00:00.123Z\",\n    \"title\": \"Example record\",\n    \"active\": true\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "48739cca-6574-427c-80df-86b845af2d9b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ac3f5b5f-f791-4dea-b7b2-7984aa07fddc",
+      "name": "Delete a record - default",
+      "request": {
+        "urlPathTemplate": "/litedbs/{litedbSlug}/tables/{tableId}/records/{recordId}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "litedbSlug": {
+            "equalTo": "<LITEDB_SLUG>"
+          },
+          "tableId": {
+            "equalTo": "<TABLE_ID>"
+          },
+          "recordId": {
+            "equalTo": "<RECORD_ID>"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ac3f5b5f-f791-4dea-b7b2-7984aa07fddc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e9b06813-c6e3-4708-9dca-48cd453e8282",
+      "name": "Update a record - update_record_response",
+      "request": {
+        "urlPathTemplate": "/litedbs/{litedbSlug}/tables/{tableId}/records/{recordId}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "litedbSlug": {
+            "equalTo": "<LITEDB_SLUG>"
+          },
+          "tableId": {
+            "equalTo": "<TABLE_ID>"
+          },
+          "recordId": {
+            "equalTo": "<RECORD_ID>"
+          }
+        },
+        "queryParameters": {
+          "fields": {
+            "equalTo": "*"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"status\": 200,\n  \"code\": \"ok\",\n  \"message\": \"Success\",\n  \"data\": {\n    \"id\": \"97cc3d3d-3804-4669-97b9-567572fb6653\",\n    \"created\": \"2022-01-01 10:00:00.123Z\",\n    \"updated\": \"2022-01-01 11:00:00.456Z\",\n    \"title\": \"Updated record\",\n    \"active\": false\n  },\n  \"details\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e9b06813-c6e3-4708-9dca-48cd453e8282",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "total": 23
+  }
+}
