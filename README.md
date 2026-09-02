@@ -7,6 +7,7 @@ The Funcatehq Go library provides convenient access to the Funcatehq APIs from G
 ## Table of Contents
 
 - [Reference](#reference)
+- [Environment Configuration](#environment-configuration)
 - [Usage](#usage)
 - [Environments](#environments)
 - [Errors](#errors)
@@ -21,6 +22,44 @@ The Funcatehq Go library provides convenient access to the Funcatehq APIs from G
 ## Reference
 
 A full reference for this library is available [here](https://github.com/lawrencexu/funcate-server-go-sdk/blob/HEAD/./reference.md).
+
+## Environment Configuration
+
+The API endpoint uses the following format:
+
+`https://{org}-{system}-{env}.funcate.com.cn/v1`
+
+By default, the SDK connects to the production environment:
+
+```go
+client := client.NewClient(
+    option.WithOrg("hsm"),
+    option.WithSystem("jianli"),
+    option.WithEnv("prod"),
+)
+```
+
+For UAT:
+
+```go
+client := client.NewClient(
+    option.WithOrg("hsm"),
+    option.WithSystem("jianli"),
+    option.WithEnv("uat"),
+)
+```
+
+For SIT:
+
+```go
+client := client.NewClient(
+    option.WithOrg("hsm"),
+    option.WithSystem("jianli"),
+    option.WithEnv("sit"),
+)
+```
+You can replace these 3 values with your own setup.
+
 
 ## Usage
 
