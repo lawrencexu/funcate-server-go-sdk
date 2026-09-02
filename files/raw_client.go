@@ -43,7 +43,7 @@ func (r *RawClient) ListFiles(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/buckets/%v/files",
@@ -95,7 +95,7 @@ func (r *RawClient) UploadFile(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/buckets/%v/files",
@@ -156,7 +156,7 @@ func (r *RawClient) GetFile(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/buckets/%v/files/%v",
@@ -202,7 +202,7 @@ func (r *RawClient) DeleteFile(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/buckets/%v/files/%v",
@@ -248,7 +248,7 @@ func (r *RawClient) ViewFile(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/buckets/%v/view/files/%v",
@@ -294,7 +294,7 @@ func (r *RawClient) DownloadFile(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/buckets/%v/download/files/%v",

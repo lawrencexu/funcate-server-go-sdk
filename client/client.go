@@ -32,15 +32,25 @@ type Client struct {
 
 func NewClient(opts ...option.RequestOption) *Client {
 	options := core.NewRequestOptions(opts...)
-	if options.Env != "" {
+	if options.Org != "" || options.System != "" || options.Env != "" {
+		org := options.Org
+		if org == "" {
+			org = "hsm"
+		}
+		system := options.System
+		if system == "" {
+			system = "jianli"
+		}
 		env := options.Env
 		if env == "" {
-			env = "org-sys-env"
+			env = "prod"
 		}
 		switch options.BaseURL {
 		case "", funcateservergosdk.Environments.Default:
 			options.BaseURL = fmt.Sprintf(
-				"https://%s.funcate.com.cn/v1",
+				"https://%s-%s%s.funcate.com.cn/v1",
+				org,
+				system,
 				env,
 			)
 		}

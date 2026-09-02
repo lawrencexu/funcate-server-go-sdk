@@ -90,8 +90,8 @@ func TestUsersCreateUserWithWireMock(
 	request := &funcateservergosdk.CreateUserRequest{
 		AuthSlug:        "<AUTH_SLUG>",
 		Username:        "johndoe",
-		Password:        "secret_password",
-		PasswordConfirm: "secret_password",
+		Password:        "password123",
+		PasswordConfirm: "password123",
 	}
 	_, invocationErr := client.Users.CreateUser(
 		context.TODO(),

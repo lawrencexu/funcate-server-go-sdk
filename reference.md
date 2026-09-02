@@ -517,9 +517,6 @@ request := &funcateservergosdk.CreateMessageRequest{
             ),
         },
     },
-    Stream: funcateservergosdk.Bool(
-        false,
-    ),
 }
 client.Messages.CreateMessage(
     context.TODO(),
@@ -682,7 +679,7 @@ Login with username and password
 request := &funcateservergosdk.AuthWithPasswordRequest{
     AuthSlug: "<AUTH_SLUG>",
     Username: "johndoe",
-    Password: "secret_password",
+    Password: "password123",
 }
 client.Authentication.AuthWithPassword(
     context.TODO(),
@@ -881,8 +878,8 @@ Create a new user account with username and password
 request := &funcateservergosdk.CreateUserRequest{
     AuthSlug: "<AUTH_SLUG>",
     Username: "johndoe",
-    Password: "secret_password",
-    PasswordConfirm: "secret_password",
+    Password: "password123",
+    PasswordConfirm: "password123",
 }
 client.Users.CreateUser(
     context.TODO(),

@@ -95,6 +95,22 @@ func WithoutRetries() *core.WithoutRetriesOption {
 	return &core.WithoutRetriesOption{}
 }
 
+// WithOrg sets the "org" server URL variable, which is
+// substituted into the base URL template(s) at construction time.
+func WithOrg(org string) *core.OrgOption {
+	return &core.OrgOption{
+		Org: org,
+	}
+}
+
+// WithSystem sets the "system" server URL variable, which is
+// substituted into the base URL template(s) at construction time.
+func WithSystem(system string) *core.SystemOption {
+	return &core.SystemOption{
+		System: system,
+	}
+}
+
 // WithEnv sets the "env" server URL variable, which is
 // substituted into the base URL template(s) at construction time.
 func WithEnv(env string) *core.EnvOption {

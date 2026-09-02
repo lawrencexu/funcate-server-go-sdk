@@ -41,8 +41,8 @@ func NewClient(options *core.RequestOptions) *Client {
 //	request := &funcateservergosdk.CreateUserRequest{
 //	    AuthSlug: "<AUTH_SLUG>",
 //	    Username: "johndoe",
-//	    Password: "secret_password",
-//	    PasswordConfirm: "secret_password",
+//	    Password: "password123",
+//	    PasswordConfirm: "password123",
 //	}
 //	client.Users.CreateUser(
 //	    context.TODO(),

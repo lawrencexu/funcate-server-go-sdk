@@ -29,6 +29,8 @@ type RequestOptions struct {
 	DisableRetries             bool
 	Token                      string
 	TokenFunc                  func() (string, error)
+	Org                        string
+	System                     string
 	Env                        string
 }
 
@@ -66,7 +68,8 @@ func (r *RequestOptions) cloneHeader() http.Header {
 	headers := r.HTTPHeader.Clone()
 	headers.Set("X-Fern-Language", "Go")
 	headers.Set("X-Fern-SDK-Name", "github.com/lawrencexu/funcate-server-go-sdk")
-	headers.Set("X-Fern-SDK-Version", "v0.0.1")
+	headers.Set("X-Fern-SDK-Version", "v0.0.2")
+	headers.Set("User-Agent", "github.com/lawrencexu/funcate-server-go-sdk/0.0.2")
 	return headers
 }
 
@@ -154,6 +157,24 @@ type WithoutRetriesOption struct{}
 
 func (w *WithoutRetriesOption) applyRequestOptions(opts *RequestOptions) {
 	opts.DisableRetries = true
+}
+
+// OrgOption implements the RequestOption interface.
+type OrgOption struct {
+	Org string
+}
+
+func (o *OrgOption) applyRequestOptions(opts *RequestOptions) {
+	opts.Org = o.Org
+}
+
+// SystemOption implements the RequestOption interface.
+type SystemOption struct {
+	System string
+}
+
+func (s *SystemOption) applyRequestOptions(opts *RequestOptions) {
+	opts.System = s.System
 }
 
 // EnvOption implements the RequestOption interface.

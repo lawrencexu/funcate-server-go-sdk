@@ -136,9 +136,6 @@ func TestMessagesCreateMessageWithWireMock(
 				),
 			},
 		},
-		Stream: funcateservergosdk.Bool(
-			false,
-		),
 	}
 	_, invocationErr := client.Messages.CreateMessage(
 		context.TODO(),

@@ -41,7 +41,7 @@ func (r *RawClient) GetAuthMethods(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/auths/%v/methods",
@@ -85,7 +85,7 @@ func (r *RawClient) AuthWithPassword(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/auths/%v/withPassword",
@@ -131,7 +131,7 @@ func (r *RawClient) AuthRefresh(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/auths/%v/refresh",
@@ -175,7 +175,7 @@ func (r *RawClient) GetPublicToken(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/auths/%v/public",

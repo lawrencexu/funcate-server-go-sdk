@@ -115,7 +115,7 @@ func TestAuthenticationAuthWithPasswordWithWireMock(
 	request := &funcateservergosdk.AuthWithPasswordRequest{
 		AuthSlug: "<AUTH_SLUG>",
 		Username: "johndoe",
-		Password: "secret_password",
+		Password: "password123",
 	}
 	_, invocationErr := client.Authentication.AuthWithPassword(
 		context.TODO(),

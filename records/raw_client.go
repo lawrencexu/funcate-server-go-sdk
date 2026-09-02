@@ -41,7 +41,7 @@ func (r *RawClient) ListRecords(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/litedbs/%v/tables/%v/records",
@@ -94,7 +94,7 @@ func (r *RawClient) CreateRecord(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/litedbs/%v/tables/%v/records",
@@ -149,7 +149,7 @@ func (r *RawClient) GetRecord(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/litedbs/%v/tables/%v/records/%v",
@@ -203,7 +203,7 @@ func (r *RawClient) DeleteRecord(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/litedbs/%v/tables/%v/records/%v",
@@ -248,7 +248,7 @@ func (r *RawClient) UpdateRecord(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/litedbs/%v/tables/%v/records/%v",

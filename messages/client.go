@@ -89,9 +89,6 @@ func (c *Client) ListMessages(
 //	            ),
 //	        },
 //	    },
-//	    Stream: funcateservergosdk.Bool(
-//	        false,
-//	    ),
 //	}
 //	client.Messages.CreateMessage(
 //	    context.TODO(),

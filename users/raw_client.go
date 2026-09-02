@@ -41,7 +41,7 @@ func (r *RawClient) CreateUser(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/auths/%v/users",
@@ -87,7 +87,7 @@ func (r *RawClient) GetCurrentUser(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/auths/%v/users/current",

@@ -9,5 +9,5 @@ package api
 var Environments = struct {
 	Default string
 }{
-	Default: "https://org-sys-env.funcate.com.cn/v1",
+	Default: "https://hsm-jianliprod.funcate.com.cn/v1",
 }

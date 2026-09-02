@@ -41,7 +41,7 @@ func (r *RawClient) ListMessages(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/agents/%v/owners/%v/sessions/%v/messages",
@@ -94,7 +94,7 @@ func (r *RawClient) CreateMessage(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://org-sys-env.funcate.com.cn/v1",
+		"https://hsm-jianliprod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/agents/%v/owners/%v/sessions/%v/messages",
