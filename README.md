@@ -39,26 +39,30 @@ client := client.NewClient(
 )
 ```
 
-For UAT:
+For Test environment:
 
 ```go
 client := client.NewClient(
     option.WithOrg("hsm"),
     option.WithSystem("jianli"),
-    option.WithEnv("uat"),
-)
-```
-
-For SIT:
-
-```go
-client := client.NewClient(
-    option.WithOrg("hsm"),
-    option.WithSystem("jianli"),
-    option.WithEnv("sit"),
+    option.WithEnv("test"),
 )
 ```
 You can replace these 3 values with your own setup.
+
+Suppose you have organization *org1* and system *sys1* and env *test*:
+
+```go
+client := client.NewClient(
+option.WithOrg("org1"),
+option.WithSystem("sys1"),
+option.WithEnv("test"),
+)
+// or equivalently
+client := client.NewClient(
+  option.WithBaseURL("https://org1-sys1-test.funcate.com.cn/v1"),
+)
+```
 
 
 ## Usage
