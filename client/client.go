@@ -48,7 +48,7 @@ func NewClient(opts ...option.RequestOption) *Client {
 		switch options.BaseURL {
 		case "", funcateservergosdk.Environments.Default:
 			options.BaseURL = fmt.Sprintf(
-				"https://%s-%s%s.funcate.com.cn/v1",
+				"https://%s-%s-%s.funcate.com.cn/v1",
 				org,
 				system,
 				env,

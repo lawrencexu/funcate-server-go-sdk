@@ -41,7 +41,7 @@ func (r *RawClient) ListSessions(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://hsm-jianliprod.funcate.com.cn/v1",
+		"https://hsm-jianli-prod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/agents/%v/owners/%v/sessions",
@@ -93,7 +93,7 @@ func (r *RawClient) CreateSession(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://hsm-jianliprod.funcate.com.cn/v1",
+		"https://hsm-jianli-prod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/agents/%v/owners/%v/sessions",
@@ -138,7 +138,7 @@ func (r *RawClient) GetSession(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://hsm-jianliprod.funcate.com.cn/v1",
+		"https://hsm-jianli-prod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/agents/%v/owners/%v/sessions/%v",
@@ -184,7 +184,7 @@ func (r *RawClient) DeleteSession(
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
-		"https://hsm-jianliprod.funcate.com.cn/v1",
+		"https://hsm-jianli-prod.funcate.com.cn/v1",
 	)
 	endpointURL := internal.EncodeURL(
 		baseURL+"/agents/%v/owners/%v/sessions/%v",
